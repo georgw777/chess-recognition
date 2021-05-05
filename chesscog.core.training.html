@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>chesscog.core.training package &mdash; chesscog 1.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="chesscog.corner_detection package" href="chesscog.corner_detection.html" />
+    <link rel="prev" title="chesscog.core.io package" href="chesscog.core.io.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> chesscog
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="chesscog.html">chesscog package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="chesscog.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="chesscog.core.html">chesscog.core package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="chesscog.core.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.coordinates">chesscog.core.coordinates module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.evaluation">chesscog.core.evaluation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.exceptions">chesscog.core.exceptions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.models">chesscog.core.models module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.registry">chesscog.core.registry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chesscog.core.html#module-chesscog.core.statistics">chesscog.core.statistics module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.corner_detection.html">chesscog.corner_detection package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.data_synthesis.html">chesscog.data_synthesis package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.occupancy_classifier.html">chesscog.occupancy_classifier package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.piece_classifier.html">chesscog.piece_classifier package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.recognition.html">chesscog.recognition package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.report.html">chesscog.report package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chesscog.transfer_learning.html">chesscog.transfer_learning package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">chesscog</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="chesscog.html">chesscog package</a> &raquo;</li>
+        
+          <li><a href="chesscog.core.html">chesscog.core package</a> &raquo;</li>
+        
+      <li>chesscog.core.training package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chesscog.core.training.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-chesscog.core.training">
+<span id="chesscog-core-training-package"></span><h1>chesscog.core.training package<a class="headerlink" href="#module-chesscog.core.training" title="Permalink to this headline">¶</a></h1>
+<p>Core training functionality.</p>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chesscog.core.training.create_configs">
+<span id="chesscog-core-training-create-configs-module"></span><h2>chesscog.core.training.create_configs module<a class="headerlink" href="#module-chesscog.core.training.create_configs" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="chesscog.core.training.create_configs.create_configs">
+<code class="sig-prename descclassname">chesscog.core.training.create_configs.</code><code class="sig-name descname">create_configs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classifier</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">include_centercrop</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#chesscog.core.training.create_configs.create_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the YAML configuration files for all registered models for a classifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>classifier</strong> (<em>str</em>) – the classifier (either <cite>“occupancy_classifier”</cite> or <cite>“piece_classifier”</cite>)</p></li>
+<li><p><strong>include_centercrop</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to create two configs per model, one including center crop and one not. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-chesscog.core.training.optimizer">
+<span id="chesscog-core-training-optimizer-module"></span><h2>chesscog.core.training.optimizer module<a class="headerlink" href="#module-chesscog.core.training.optimizer" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="chesscog.core.training.optimizer.build_optimizer_from_config">
+<code class="sig-prename descclassname">chesscog.core.training.optimizer.</code><code class="sig-name descname">build_optimizer_from_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">optimizer_cfg</span><span class="p">:</span> <span class="n">recap.config.CfgNode</span></em>, <em class="sig-param"><span class="n">params</span><span class="p">:</span> <span class="n">Iterable</span></em><span class="sig-paren">)</span> &#x2192; torch.optim.optimizer.Optimizer<a class="headerlink" href="#chesscog.core.training.optimizer.build_optimizer_from_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an optimizer for neural network training from a configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>optimizer_cfg</strong> (<em>CN</em>) – the optimizer part of the configuration object</p></li>
+<li><p><strong>params</strong> (<em>typing.Iterable</em>) – the parameters to optimize</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>NotImplementedError</strong> – if the desired optimizer is not implemented</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the built optimizer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>torch.optim.Optimizer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-chesscog.core.training.train">
+<span id="chesscog-core-training-train-module"></span><h2>chesscog.core.training.train module<a class="headerlink" href="#module-chesscog.core.training.train" title="Permalink to this headline">¶</a></h2>
+<p>Main implementation of model training.</p>
+<dl class="py function">
+<dt id="chesscog.core.training.train.train">
+<code class="sig-prename descclassname">chesscog.core.training.train.</code><code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cfg</span><span class="p">:</span> <span class="n">recap.config.CfgNode</span></em>, <em class="sig-param"><span class="n">run_dir</span><span class="p">:</span> <span class="n">pathlib.Path</span></em><span class="sig-paren">)</span> &#x2192; torch.nn.modules.module.Module<a class="headerlink" href="#chesscog.core.training.train.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traing a model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>CN</em>) – the configuration object describing the model, dataset, etc.</p></li>
+<li><p><strong>run_dir</strong> (<em>Path</em>) – where to write tensorboard files, the active YAML file, and the chosen weights</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the trained model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nn.Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="chesscog.core.training.train.train_model">
+<code class="sig-prename descclassname">chesscog.core.training.train.</code><code class="sig-name descname">train_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cfg</span><span class="p">:</span> <span class="n">recap.config.CfgNode</span></em>, <em class="sig-param"><span class="n">run_dir</span><span class="p">:</span> <span class="n">pathlib.Path</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">torch.nn.modules.module.Module</span></em>, <em class="sig-param"><span class="n">is_inception</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">model_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eval_on_train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; torch.nn.modules.module.Module<a class="headerlink" href="#chesscog.core.training.train.train_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a model that has already been loaded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>CN</em>) – the configuration object describing the model, dataset, etc.</p></li>
+<li><p><strong>run_dir</strong> (<em>Path</em>) – where to write tensorboard files, the active YAML file, and the chosen weights</p></li>
+<li><p><strong>model</strong> (<em>torch.nn.Module</em>) – the loaded model</p></li>
+<li><p><strong>is_inception</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether the model is InceptionV3. Defaults to False.</p></li>
+<li><p><strong>model_name</strong> (<em>str</em><em>, </em><em>optional</em>) – the name of the model (by default the last component of the run directory). Defaults to None.</p></li>
+<li><p><strong>eval_on_train</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to evaluate on the training set. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the trained model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nn.Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-chesscog.core.training.train_classifier">
+<span id="chesscog-core-training-train-classifier-module"></span><h2>chesscog.core.training.train_classifier module<a class="headerlink" href="#module-chesscog.core.training.train_classifier" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="chesscog.core.training.train_classifier.train_classifier">
+<code class="sig-prename descclassname">chesscog.core.training.train_classifier.</code><code class="sig-name descname">train_classifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#chesscog.core.training.train_classifier.train_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up CLI interface for training a classifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – the name of the classifier (<cite>“occupancy_classifier”</cite> or <cite>“piece_classifier”</cite>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chesscog.corner_detection.html" class="btn btn-neutral float-right" title="chesscog.corner_detection package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chesscog.core.io.html" class="btn btn-neutral float-left" title="chesscog.core.io package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Georg Wölflein
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
